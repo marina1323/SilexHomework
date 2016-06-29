@@ -1,0 +1,5 @@
+#/bin/bash
+#
+#
+cd /home/marina/Desktop/php/sli(1)
+bin/phpcs -p --standard=PSR2 --extensions=php ./src

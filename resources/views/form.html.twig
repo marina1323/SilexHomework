@@ -1,0 +1,30 @@
+{% extends ('layout.html.twig') %}
+{% block content %}
+<div class="card" id="panel">
+  
+<h4>{{action}}</h4>
+<hr>
+{{ form_start(form, {'attr': {'class': 'form-horizontal postform'}}) }}
+    {{ form_errors(form) }}
+      <div class="col-sm-7">
+    <span class="req">*</span>{{ form_row(form.firstName,{'attr': {'class': 'form-control'}}) }}
+	</div>
+	 <div class="col-sm-7">
+    {{ form_row(form.lastName,{'attr': {'class': 'form-control'}}) }}
+	</div>
+	 <div class="col-sm-7">
+	<span class="req">*</span>{{ form_row(form.email,{'attr': {'class': 'form-control'}}) }}
+	</div>
+	 <div class="col-sm-7">
+	{{ form_row(form.phoneNumber,{'attr': {'class': 'form-control'}}) }}
+	</div>
+	 <div class="col-sm-7">
+	{{ form_row(form.comment,{'attr': {'class': 'form-control'}}) }}
+	</div>
+      <div class="col-sm-7 col-sm-offset-3">
+    <input type="submit" name="submit" class="btn btn-primary postbutton"/>
+	</div>
+{{ form_end(form) }}
+ <div class="col-sm-4 col-sm-offset-9"><a href="{{ path('posts.view')}}">Return to the main page >></a></div>
+</div>
+{% endblock %}

@@ -1,15 +1,19 @@
 <?php
 
 require_once __DIR__.'/../vendor/autoload.php';
-use Doctrine\DBAL\Schema\Table;
+/*use Doctrine\DBAL\Schema\Table;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Response;*/
 
-$app = new Silex\Application();
+
+$app = new \Application\App();
 $app['debug'] = true; 
-
+$app->run();
+//$app = new Silex\Application();
+//$app['debug'] = true; 
+/*
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'\..\views',
     ));
@@ -116,3 +120,4 @@ $app->match('/edit/{id}', function ($id, Request $request) use ($app){
      return $app['twig']->render('form.html.twig', array('form' => $form->createView()));
 })->bind('edit');
 $app->run();
+*/
