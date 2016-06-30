@@ -1,59 +1,63 @@
 <?php
 
 namespace Application\Entity;
+
 use Symfony\Component\Validator\Constraints as Assert;
-class Post{
+
+class Post
+{
 
      /**
      * Post id.
      *
      * @var integer
      */
-     protected $id;
-	 
-	 /**
+    protected $id;
+
+    /**
      * Authors first name.
      *
      * @var string
      */
-     protected $firstName;
-	 
-	 /**
+    protected $firstName;
+
+    /**
      *  Authors last name.
      *
      * @var string
      */
-	
-     protected $lastName;
-	 /**
+
+    protected $lastName;
+
+    /**
      *  Authors email.
      *
      * @var string
      */
-	 
-     protected $email;
-	 
-	 /**
+
+    protected $email;
+
+    /**
      *  Authors telephone number.
      *
      * @var string
      */
-	 
-     protected $phoneNumber;
-	 
-	 /**
+
+    protected $phoneNumber;
+
+    /**
      *  Comment.
      *
      * @var string
      */
      
-     protected $comment;
+    protected $comment;
 
     public function setId($id)
     {
-       $this->id = $id;
+        $this->id = $id;
     }
-	
+
     public function getId()
     {
         return $this->id;
@@ -68,7 +72,7 @@ class Post{
     {
         return $this->firstName;
     }
-	
+
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
@@ -88,7 +92,7 @@ class Post{
     {
         return $this->email;
     }
-	
+
     public function setPhoneNumber($phoneNumber)
     {
         $this->phoneNumber = $phoneNumber;
@@ -108,7 +112,4 @@ class Post{
     {
         return $this->comment;
     }
-
-  
-
- }
+}
